@@ -1,20 +1,37 @@
+let nivelAtual = 1;
 let rodadaAtual = 0;
-let pontuacao = 0;
+let pontuacaoNivel = 0;
+let pontuacaoTotalGeral = 0;
 let perguntasDaPartida = [];
+let historicoNiveis = [];
+
+const nomesNiveis = {
+    1: "Nível 1: Básico",
+    2: "Nível 2: Intermediário",
+    3: "Nível 3: Avançado"
+};
 
 function iniciarJogo() {
     document.getElementById("tela-inicial").classList.add("hidden");
+    nivelAtual = 1;
+    pontuacaoTotalGeral = 0;
+    historicoNiveis = [];
+    iniciarNivel(nivelAtual);
+}
+
+function iniciarNivel(nivel) {
     rodadaAtual = 0;
-    pontuacao = 0;
+    pontuacaoNivel = 0;
     
-    let cenariosEmbaralhados = [...cenarios];
-    for (let i = cenariosEmbaralhados.length - 1; i > 0; i--) {
+    let cenariosDoNivel = cenarios.filter(c => c.nivel === nivel);
+    
+    for (let i = cenariosDoNivel.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [cenariosEmbaralhados[i], cenariosEmbaralhados[j]] = [cenariosEmbaralhados[j], cenariosEmbaralhados[i]];
+        [cenariosDoNivel[i], cenariosDoNivel[j]] = [cenariosDoNivel[j], cenariosDoNivel[i]];
     }
     
-    perguntasDaPartida = cenariosEmbaralhados.slice(0, 7);
-    
+    perguntasDaPartida = cenariosDoNivel;
+    document.getElementById("badge-nivel").innerText = `Nível ${nivel}/3`;
     carregarRodada(rodadaAtual);
 }
 
@@ -37,7 +54,8 @@ function verificarResposta(jogadorAchaQueEGolpe) {
     const explicacao = document.getElementById("modal-explicacao");
 
     if (acertou) {
-        pontuacao++;
+        pontuacaoNivel++;
+        pontuacaoTotalGeral++;
         icone.innerText = "✅";
         titulo.innerText = "Você Acertou!";
         titulo.style.color = "#22c55e";
@@ -59,35 +77,70 @@ function proximaRodada() {
     if (rodadaAtual < perguntasDaPartida.length) {
         carregarRodada(rodadaAtual);
     } else {
-        finalizarJogo();
+        finalizarNivel();
     }
 }
 
-function finalizarJogo() {
+function finalizarNivel() {
+    const totalPerguntasNivel = perguntasDaPartida.length;
+    const errosNivel = totalPerguntasNivel - pontuacaoNivel;
+
+    historicoNiveis.push({
+        nivel: nivelAtual,
+        nome: nomesNiveis[nivelAtual],
+        acertos: pontuacaoNivel,
+        erros: errosNivel,
+        total: totalPerguntasNivel
+    });
+
     document.getElementById("tela-final").classList.remove("hidden");
-    document.getElementById("pontuacao-final").innerText = pontuacao;
-    document.getElementById("total-final").innerText = perguntasDaPartida.length;
     
+    const subtitulo = document.getElementById("subtitulo-nivel-final");
     const titulo = document.getElementById("resultado-titulo");
     const texto = document.getElementById("resultado-texto");
     const icone = document.getElementById("resultado-icone");
-    const aproveitamento = pontuacao / perguntasDaPartida.length;
-    
-    if (aproveitamento === 1) {
-        titulo.innerText = "Detetive Impecável!";
-        titulo.style.color = "#008069";
-        texto.innerText = "Parabéns! Você tem um olhar treinado e está blindado contra as principais ameaças digitais.";
-        icone.style.backgroundColor = "#008069";
-    } else if (aproveitamento >= 0.6) {
-        titulo.innerText = "Cidadão Atento!";
-        titulo.style.color = "#eab308";
-        texto.innerText = "Você evitou a maioria dos golpes, mas ainda precisa redobrar a atenção com mensagens urgentes.";
-        icone.style.backgroundColor = "#eab308";
+    const btnAcao = document.getElementById("btn-acao-final");
+    const resumoGeral = document.getElementById("resumo-geral-niveis");
+    const listaDesempenho = document.getElementById("lista-desempenho-niveis");
+
+    if (nivelAtual < 3) {
+        resumoGeral.classList.add("hidden");
+        subtitulo.innerText = nomesNiveis[nivelAtual];
+        document.getElementById("pontuacao-final").innerText = pontuacaoNivel;
+        document.getElementById("total-final").innerText = totalPerguntasNivel;
+
+        const aproveitamento = pontuacaoNivel / totalPerguntasNivel;
+        definirEstiloResultado(aproveitamento, titulo, icone);
+
+        texto.innerText = `Você concluiu o ${nomesNiveis[nivelAtual]}. Prepare-se para mensagens mais sutis na próxima etapa.`;
+        btnAcao.innerText = `Avançar para o Nível ${nivelAtual + 1}`;
     } else {
-        titulo.innerText = "Alvo Fácil!";
-        titulo.style.color = "#ef4444";
-        texto.innerText = "Cuidado! Desconfie sempre de links desconhecidos e pedidos financeiros urgentes.";
-        icone.style.backgroundColor = "#ef4444";
+        resumoGeral.classList.remove("hidden");
+        subtitulo.innerText = "Resultado Final Completo";
+        
+        const totalGeralCenarios = historicoNiveis.reduce((acc, item) => acc + item.total, 0);
+        document.getElementById("pontuacao-final").innerText = pontuacaoTotalGeral;
+        document.getElementById("total-final").innerText = totalGeralCenarios;
+
+        const aproveitamentoGeral = pontuacaoTotalGeral / totalGeralCenarios;
+        definirEstiloResultado(aproveitamentoGeral, titulo, icone);
+
+        texto.innerText = "Parabéns por concluir todas as etapas do treinamento! Confira seu desempenho detalhado:";
+        btnAcao.innerText = "Reiniciar Treinamento Completo";
+
+        listaDesempenho.innerHTML = "";
+        historicoNiveis.forEach(item => {
+            const linha = document.createElement("div");
+            linha.style.cssText = "display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; background: #ffffff; border-radius: 8px; border: 1px solid #e9edef;";
+            linha.innerHTML = `
+                <span style="font-weight: 600; color: #111b21;">${item.nome}</span>
+                <span>
+                    <strong style="color: #22c55e;">✅ ${item.acertos}</strong> &nbsp;|&nbsp; 
+                    <strong style="color: #ef4444;">❌ ${item.erros}</strong>
+                </span>
+            `;
+            listaDesempenho.appendChild(linha);
+        });
     }
 
     const listaRef = document.getElementById("lista-referencias");
@@ -108,7 +161,32 @@ function finalizarJogo() {
     });
 }
 
-function reiniciarJogo() {
+function definirEstiloResultado(aproveitamento, titulo, icone) {
+    if (aproveitamento === 1) {
+        titulo.innerText = "Detetive Impecável!";
+        titulo.style.color = "#008069";
+        icone.style.backgroundColor = "#008069";
+    } else if (aproveitamento >= 0.6) {
+        titulo.innerText = "Cidadão Atento!";
+        titulo.style.color = "#eab308";
+        icone.style.backgroundColor = "#eab308";
+    } else {
+        titulo.innerText = "Atenção Redobrada!";
+        titulo.style.color = "#ef4444";
+        icone.style.backgroundColor = "#ef4444";
+    }
+}
+
+function avancarOuReiniciar() {
     document.getElementById("tela-final").classList.add("hidden");
-    iniciarJogo();
+    
+    if (nivelAtual < 3) {
+        nivelAtual++;
+        iniciarNivel(nivelAtual);
+    } else {
+        nivelAtual = 1;
+        pontuacaoTotalGeral = 0;
+        historicoNiveis = [];
+        iniciarNivel(nivelAtual);
+    }
 }
