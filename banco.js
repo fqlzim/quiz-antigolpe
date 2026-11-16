@@ -1,5 +1,6 @@
 const cenarios = [
     {
+        nivel: 1,
         nome: "Nubank",
         numero: "+55 11 9888-0000",
         dia: "HOJE",
@@ -11,6 +12,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
     },
     {
+        nivel: 2,
         nome: "Nubank",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -22,6 +24,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/banco-via-internet/fasciculo-banco-via-internet.pdf"
     },
     {
+        nivel: 2,
         nome: "+55 83 98888-7777",
         numero: "~ Filho",
         dia: "HOJE",
@@ -33,6 +36,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
     },
     {
+        nivel: 1,
         nome: "+55 83 97777-6666",
         numero: "~ Amiga",
         dia: "HOJE",
@@ -44,6 +48,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf"
     },
     {
+        nivel: 3,
         nome: "Correios",
         numero: "+55 61 9555-4444",
         dia: "HOJE",
@@ -55,6 +60,7 @@ const cenarios = [
         referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe"
     },
     {
+        nivel: 2,
         nome: "Correios",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -66,6 +72,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf"
     },
     {
+        nivel: 2,
         nome: "Gupy Vagas",
         numero: "+55 11 9111-2222",
         dia: "HOJE",
@@ -77,6 +84,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/codigos-maliciosos/fasciculo-codigos-maliciosos.pdf"
     },
     {
+        nivel: 1,
         nome: "RH Empresa",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -88,6 +96,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
     },
     {
+        nivel: 3,
         nome: "Claro Brasil",
         numero: "+55 11 9000-0000",
         dia: "HOJE",
@@ -99,6 +108,7 @@ const cenarios = [
         referenciaLink: "https://www.claro.com.br/seguranca"
     },
     {
+        nivel: 3,
         nome: "Claro Brasil",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -110,6 +120,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf"
     },
     {
+        nivel: 3,
         nome: "Mercado Livre",
         numero: "+55 21 9555-3333",
         dia: "HOJE",
@@ -121,6 +132,7 @@ const cenarios = [
         referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe"
     },
     {
+        nivel: 1,
         nome: "Mercado Livre",
         numero: "Conta comercial (Verificada)",
         dia: "HOJE",
@@ -132,6 +144,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf"
     },
     {
+        nivel: 1,
         nome: "Latam Airlines",
         numero: "+55 61 9888-2323",
         dia: "HOJE",
@@ -143,6 +156,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/autenticacao/fasciculo-autenticacao.pdf"
     },
     {
+        nivel: 2,
         nome: "Latam Airlines",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -150,10 +164,11 @@ const cenarios = [
         conteudo: "O check-in para o seu voo LA3345 já está aberto. Acesse o site oficial da Latam ou use nosso app para garantir seu assento.",
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Mensagem que empodera o consumidor a acessar os meios oficiais por si mesmo, garantindo a legitimidade do processo.",
-        referenciaTitulo: "CERT.br: Fascículo Contas e Senhas (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/contas/fasciculo-contas.pdf"
+        referenciaTitulo: "LATAM - Conselhos contra golpes",
+        referenciaLink: "https://www.latamairlines.com/br/pt/seguranca/conselhos-contra-golpes"
     },
     {
+        nivel: 1,
         nome: "Netflix",
         numero: "+55 11 9666-3333",
         dia: "HOJE",
@@ -165,6 +180,7 @@ const cenarios = [
         referenciaLink: "https://help.netflix.com/pt/"
     },
     {
+        nivel: 1,
         nome: "Netflix",
         numero: "Conta comercial (Verificada)",
         dia: "ONTEM",
@@ -176,6 +192,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf"
     },
     {
+        nivel: 2,
         nome: "Gov.br - Resgate",
         numero: "+55 61 9333-2222",
         dia: "HOJE",
@@ -187,6 +204,7 @@ const cenarios = [
         referenciaLink: "https://valoresareceber.bcb.gov.br"
     },
     {
+        nivel: 3,
         nome: "Portal Gov.br",
         numero: "Conta oficial (Verificada)",
         dia: "ONTEM",
@@ -198,6 +216,7 @@ const cenarios = [
         referenciaLink: "https://www.gov.br/pt-br/temas/seguranca-da-informacao"
     },
     {
+        nivel: 1,
         nome: "Detran-PB",
         numero: "+55 83 9999-1234",
         dia: "HOJE",
@@ -209,6 +228,7 @@ const cenarios = [
         referenciaLink: "https://www.gov.br/cisc/pt-br/alertas-de-golpes-digitais/falso-programa-de-cnh-cobra-taxa-via-pix"
     },
     {
+        nivel: 2,
         nome: "Detran-PB",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -220,6 +240,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
     },
     {
+        nivel: 2,
         nome: "Secretaria Unipê",
         numero: "+55 83 9123-4567",
         dia: "HOJE",
@@ -231,6 +252,7 @@ const cenarios = [
         referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe"
     },
     {
+        nivel: 1,
         nome: "Unipê",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -238,10 +260,11 @@ const cenarios = [
         conteudo: "As provas do 1º estágio começam na próxima segunda-feira. Consulte o ensalamento completo e seus horários diretamente no Portal do Aluno.",
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> O aluno é direcionado para realizar o login seguro na sua intranet acadêmica onde seus dados estão protegidos.",
-        referenciaTitulo: "CERT.br: Fascículo Senhas (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/senhas/fasciculo-senhas.pdf"
+        referenciaTitulo: "Unipê - Centro Universitário de João Pessoa",
+        referenciaLink: "https://www.unipe.edu.br/"
     },
     {
+        nivel: 2,
         nome: "Unimed",
         numero: "+55 21 9555-8888",
         dia: "HOJE",
@@ -253,6 +276,7 @@ const cenarios = [
         referenciaLink: "https://www.unimed.coop.br/"
     },
     {
+        nivel: 3,
         nome: "Unimed",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -264,6 +288,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
     },
     {
+        nivel: 3,
         nome: "iFood",
         numero: "+55 83 9444-5555",
         dia: "HOJE",
@@ -275,6 +300,7 @@ const cenarios = [
         referenciaLink: "https://institucional.ifood.com.br/institucional/como-identificar-golpes/"
     },
     {
+        nivel: 2,
         nome: "iFood",
         numero: "Conta comercial (Verificada)",
         dia: "ONTEM",
@@ -286,6 +312,7 @@ const cenarios = [
         referenciaLink: "https://blog.ifood.com.br/seguranca-no-ifood/"
     },
     {
+        nivel: 3,
         nome: "SmartFit",
         numero: "+55 11 9000-1234",
         dia: "HOJE",
@@ -297,6 +324,7 @@ const cenarios = [
         referenciaLink: "https://ajuda.smartfit.com.br/"
     },
     {
+        nivel: 3,
         nome: "SmartFit",
         numero: "Conta comercial",
         dia: "ONTEM",
@@ -308,6 +336,7 @@ const cenarios = [
         referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf"
     },
     {
+        nivel: 1,
         nome: "WhatsApp Suporte",
         numero: "+1 (555) 019-2345",
         dia: "HOJE",
@@ -319,6 +348,7 @@ const cenarios = [
         referenciaLink: "https://faq.whatsapp.com/"
     },
     {
+        nivel: 3,
         nome: "WhatsApp",
         numero: "Conta oficial (Verificada)",
         dia: "ONTEM",
