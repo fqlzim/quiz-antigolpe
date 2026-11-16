@@ -143,22 +143,27 @@ function finalizarNivel() {
         });
     }
 
+    const refContainer = document.getElementById("referencias-container");
     const listaRef = document.getElementById("lista-referencias");
-    listaRef.innerHTML = "";
     
-    const linksUnicos = [];
-    perguntasDaPartida.forEach(pergunta => {
-        const refExistente = linksUnicos.find(link => link.url === pergunta.referenciaLink);
-        if (!refExistente && pergunta.referenciaLink) {
-            linksUnicos.push({ titulo: pergunta.referenciaTitulo, url: pergunta.referenciaLink });
-        }
-    });
+    if (refContainer && listaRef) {
+        refContainer.classList.remove("hidden");
+        listaRef.innerHTML = "";
+        
+        const linksUnicos = [];
+        perguntasDaPartida.forEach(pergunta => {
+            const refExistente = linksUnicos.find(link => link.url === pergunta.referenciaLink);
+            if (!refExistente && pergunta.referenciaLink) {
+                linksUnicos.push({ titulo: pergunta.referenciaTitulo, url: pergunta.referenciaLink });
+            }
+        });
 
-    linksUnicos.forEach(ref => {
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${ref.url}" target="_blank" style="text-decoration: none; color: #008069; display: flex; align-items: flex-start; gap: 6px;"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-top: 3px; font-size: 11px;"></i> <span>${ref.titulo}</span></a>`;
-        listaRef.appendChild(li);
-    });
+        linksUnicos.forEach(ref => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${ref.url}" target="_blank" style="text-decoration: none; color: #008069; display: flex; align-items: flex-start; gap: 6px;"><i class="fa-solid fa-arrow-up-right-from-square" style="margin-top: 3px; font-size: 11px;"></i> <span>${ref.titulo}</span></a>`;
+            listaRef.appendChild(li);
+        });
+    }
 }
 
 function definirEstiloResultado(aproveitamento, titulo, icone) {
