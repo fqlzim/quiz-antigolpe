@@ -43,6 +43,11 @@ function carregarRodada(index) {
     document.getElementById("var-horario").innerText = dados.horario;
     document.getElementById("var-conteudo").innerText = dados.conteudo;
     document.getElementById("contador-rodada").innerText = `${index + 1}/${perguntasDaPartida.length}`;
+    const fotoEl = document.getElementById("var-foto");
+    const iconeEl = document.getElementById("var-foto-icone");
+    iconeEl.style.display = "none";
+    fotoEl.style.display = "block";
+    fotoEl.src = dados.foto;
 }
 
 function verificarResposta(jogadorAchaQueEGolpe) {

@@ -144,6 +144,13 @@ body {
     overflow: hidden;
 }
 
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
 .chat-details {
     display: flex;
     flex-direction: column;

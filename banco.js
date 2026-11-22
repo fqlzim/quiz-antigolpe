@@ -9,7 +9,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Gatilho de Urgência.<br><br><b>Análise:</b> Bancos não enviam links para 'cancelar' compras. O endereço contém palavras suspeitas.",
         referenciaTitulo: "CERT.br: Fascículo Golpes — Phishing e Fraudes (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf",
+        foto: "avatares/10491830.jpg"
     },
     {
         nivel: 2,
@@ -21,7 +22,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> A mensagem apenas informa a ação sem exigir cliques, orientando você a abrir o aplicativo que já tem instalado.",
         referenciaTitulo: "CERT.br: Fascículo Banco via Internet (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/banco-via-internet/fasciculo-banco-via-internet.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/banco-via-internet/fasciculo-banco-via-internet.pdf",
+        foto: "avatares/11475221.jpg"
     },
     {
         nivel: 2,
@@ -33,7 +35,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Golpe do Perfil Falso.<br><br><b>Análise:</b> O golpista cria uma história plausível (celular na água). Nunca transfira dinheiro sem antes ligar para ouvir a voz da pessoa.",
         referenciaTitulo: "CERT.br: Fascículo Golpes — Perfil Falso no WhatsApp (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf",
+        foto: "avatares/9440461.jpg"
     },
     {
         nivel: 1,
@@ -45,7 +48,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Apesar da troca de número exigir atenção, a pessoa não pede dinheiro, senhas ou favores financeiros.",
         referenciaTitulo: "CERT.br: Fascículo Privacidade (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf",
+        foto: "avatares/9439726.jpg"
     },
     {
         nivel: 3,
@@ -57,7 +61,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Falsa Taxa Postal.<br><br><b>Análise:</b> O pagamento de despacho postal ocorre exclusivamente dentro da sua conta logada no portal oficial dos Correios, não por links soltos.",
         referenciaTitulo: "Receita Federal: É Golpe? — Alertas sobre Falsas Cobranças de Encomendas",
-        referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe"
+        referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe",
+        foto: "avatares/9439678.jpg"
     },
     {
         nivel: 2,
@@ -69,7 +74,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Atualização de rastreio padrão. Informa o andamento logístico sem forçar cliques em links encurtados.",
         referenciaTitulo: "CERT.br: Fascículo Comércio via Internet (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf",
+        foto: "avatares/9439727.jpg"
     },
     {
         nivel: 2,
@@ -81,7 +87,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Distribuição de Vírus.<br><br><b>Análise:</b> Arquivos terminados em '.apk' instalam aplicativos fora das lojas oficiais, infectando seu aparelho para roubar senhas.",
         referenciaTitulo: "CERT.br: Fascículo Códigos Maliciosos (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/codigos-maliciosos/fasciculo-codigos-maliciosos.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/codigos-maliciosos/fasciculo-codigos-maliciosos.pdf",
+        foto: "avatares/9434619.jpg"
     },
     {
         nivel: 1,
@@ -93,7 +100,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Recrutamento que utiliza ferramentas oficiais e conhecidas pelo mercado sem exigir a instalação de pacotes suspeitos no celular.",
         referenciaTitulo: "CERT.br: Fascículo Golpes (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf",
+        foto: "avatares/9442242.jpg"
     },
     {
         nivel: 3,
@@ -105,7 +113,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Falsa Cobrança via Pix.<br><br><b>Análise:</b> Operadoras enviam alertas de vencimento, mas não exigem o envio de dinheiro avulso para chaves Pix informadas via chat.",
         referenciaTitulo: "Claro: Central de Segurança e Prevenção a Fraudes",
-        referenciaLink: "https://www.claro.com.br/seguranca"
+        referenciaLink: "https://www.claro.com.br/seguranca",
+        foto: "avatares/10491830.jpg"
     },
     {
         nivel: 3,
@@ -117,7 +126,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> A empresa instrui o cliente a utilizar o autoatendimento e o código de barras audível, evitando fraudes de Pix direto.",
         referenciaTitulo: "CERT.br: Fascículo Comércio via Internet (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf",
+        foto: "avatares/11475221.jpg"
     },
     {
         nivel: 3,
@@ -129,7 +139,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Gatilho de Perda.<br><br><b>Análise:</b> Sites de compras não cobram 'taxas de reenvio' via links externos de WhatsApp. Todo o ajuste logístico ocorre dentro do app oficial.",
         referenciaTitulo: "Receita Federal: É Golpe? — Alertas sobre Falsas Cobranças e 'Taxa de Reenvio'",
-        referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe"
+        referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe",
+        foto: "avatares/9440461.jpg"
     },
     {
         nivel: 1,
@@ -141,7 +152,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Notificação informativa pós-venda. Não há botões imediatos nem cobranças de taxas extras surpresa.",
         referenciaTitulo: "CERT.br: Fascículo Comércio via Internet (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/comercio-via-internet/fasciculo-comercio-via-internet.pdf",
+        foto: "avatares/9439726.jpg"
     },
     {
         nivel: 1,
@@ -153,7 +165,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Sequestro de Conta de WhatsApp.<br><br><b>Análise:</b> O código do SMS é a chave de ativação do seu WhatsApp. O golpista está tentando logar na sua conta em outro aparelho.",
         referenciaTitulo: "CERT.br: Fascículo Autenticação — Códigos por SMS (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/autenticacao/fasciculo-autenticacao.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/autenticacao/fasciculo-autenticacao.pdf",
+        foto: "avatares/9439678.jpg"
     },
     {
         nivel: 2,
@@ -165,7 +178,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Mensagem que empodera o consumidor a acessar os meios oficiais por si mesmo, garantindo a legitimidade do processo.",
         referenciaTitulo: "LATAM - Conselhos contra golpes",
-        referenciaLink: "https://www.latamairlines.com/br/pt/seguranca/conselhos-contra-golpes"
+        referenciaLink: "https://www.latamairlines.com/br/pt/seguranca/conselhos-contra-golpes",
+        foto: "avatares/9439727.jpg"
     },
     {
         nivel: 1,
@@ -177,7 +191,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Gatilho de Ameaça e Bloqueio.<br><br><b>Análise:</b> Empresas de streaming informam problemas de pagamento ao abrir o aplicativo na TV ou via e-mail corporativo autêntico.",
         referenciaTitulo: "Netflix: Central de Ajuda Oficial (Pagamentos e Segurança)",
-        referenciaLink: "https://help.netflix.com/pt/"
+        referenciaLink: "https://help.netflix.com/pt/",
+        foto: "avatares/9434619.jpg"
     },
     {
         nivel: 1,
@@ -189,7 +204,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura de Marketing.<br><br><b>Análise:</b> O único objetivo é reter a atenção do usuário no serviço, sem captura de dados financeiros.",
         referenciaTitulo: "CERT.br: Fascículo Privacidade (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf",
+        foto: "avatares/9442242.jpg"
     },
     {
         nivel: 2,
@@ -201,7 +217,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Falsa Taxa Antecipada.<br><br><b>Análise:</b> O resgate de dinheiro esquecido é gratuito pelo Banco Central. Jamais se paga uma taxa para poder receber um benefício ou saldo.",
         referenciaTitulo: "Banco Central do Brasil: Portal Oficial de Valores a Receber (SVR)",
-        referenciaLink: "https://valoresareceber.bcb.gov.br"
+        referenciaLink: "https://valoresareceber.bcb.gov.br",
+        foto: "avatares/10491830.jpg"
     },
     {
         nivel: 3,
@@ -213,7 +230,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura de Governo.<br><br><b>Análise:</b> O sistema oficial avisa sobre pendências genéricas, forçando o cidadão a entrar com a senha '.gov.br' de forma segura.",
         referenciaTitulo: "Gov.br: Segurança da Informação (Portal Oficial)",
-        referenciaLink: "https://www.gov.br/pt-br/temas/seguranca-da-informacao"
+        referenciaLink: "https://www.gov.br/pt-br/temas/seguranca-da-informacao",
+        foto: "avatares/11475221.jpg"
     },
     {
         nivel: 1,
@@ -225,7 +243,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Falso Pix Governamental.<br><br><b>Análise:</b> Órgãos públicos nunca recebem pagamentos de multas ou impostos através de contas que usam o final '@gmail.com'.",
         referenciaTitulo: "Gov.br (CISC): Alerta de Golpe — Falso Programa CNH cobra taxa via PIX",
-        referenciaLink: "https://www.gov.br/cisc/pt-br/alertas-de-golpes-digitais/falso-programa-de-cnh-cobra-taxa-via-pix"
+        referenciaLink: "https://www.gov.br/cisc/pt-br/alertas-de-golpes-digitais/falso-programa-de-cnh-cobra-taxa-via-pix",
+        foto: "avatares/9440461.jpg"
     },
     {
         nivel: 2,
@@ -237,7 +256,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Aviso generalizado, aplicável a uma categoria inteira, focado em educação no trânsito sem botões diretos de pânico.",
         referenciaTitulo: "CERT.br: Fascículo Golpes (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf",
+        foto: "avatares/9439726.jpg"
     },
     {
         nivel: 2,
@@ -249,7 +269,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Falso Boleto/Pix Acadêmico.<br><br><b>Análise:</b> Faculdades não oferecem descontos relâmpagos pelo WhatsApp sob justificativa de 'sistema fora do ar'.",
         referenciaTitulo: "Receita Federal: É Golpe? — Alertas sobre Falsas Cobranças e Fraudes",
-        referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe"
+        referenciaLink: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/e-golpe",
+        foto: "avatares/9439678.jpg"
     },
     {
         nivel: 1,
@@ -261,7 +282,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> O aluno é direcionado para realizar o login seguro na sua intranet acadêmica onde seus dados estão protegidos.",
         referenciaTitulo: "Unipê - Centro Universitário de João Pessoa",
-        referenciaLink: "https://www.unipe.edu.br/"
+        referenciaLink: "https://www.unipe.edu.br/",
+        foto: "avatares/9439727.jpg"
     },
     {
         nivel: 2,
@@ -273,7 +295,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Golpe do Aplicativo Falso.<br><br><b>Análise:</b> Evite baixar arquivos enviados em redes sociais. Baixe apenas softwares diretamente da Google Play Store ou Apple App Store.",
         referenciaTitulo: "Unimed: Portal Oficial — Canais e Aplicativos Seguros",
-        referenciaLink: "https://www.unimed.coop.br/"
+        referenciaLink: "https://www.unimed.coop.br/",
+        foto: "avatares/9434619.jpg"
     },
     {
         nivel: 3,
@@ -285,7 +308,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura de Prevenção.<br><br><b>Análise:</b> Muitas instituições de saúde e bancos utilizam seus canais unicamente para alertar e proteger os clientes de golpes.",
         referenciaTitulo: "CERT.br: Fascículo Golpes (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf",
+        foto: "avatares/9442242.jpg"
     },
     {
         nivel: 3,
@@ -297,7 +321,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Engenharia Social Ativa (Pena e Ganância).<br><br><b>Análise:</b> Golpistas usam histórias tristes. Aplicativos processam todos os reembolsos automaticamente via sistema central.",
         referenciaTitulo: "iFood: Segurança Oficial — Como Identificar Golpes",
-        referenciaLink: "https://institucional.ifood.com.br/institucional/como-identificar-golpes/"
+        referenciaLink: "https://institucional.ifood.com.br/institucional/como-identificar-golpes/",
+        foto: "avatares/10491830.jpg"
     },
     {
         nivel: 2,
@@ -309,7 +334,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Notificação estritamente sistêmica, focada apenas em acompanhamento em tempo real dentro do ecossistema do app.",
         referenciaTitulo: "Blog do iFood: Dicas Oficiais de Segurança",
-        referenciaLink: "https://blog.ifood.com.br/seguranca-no-ifood/"
+        referenciaLink: "https://blog.ifood.com.br/seguranca-no-ifood/",
+        foto: "avatares/11475221.jpg"
     },
     {
         nivel: 3,
@@ -321,7 +347,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Falsa Cobrança (Ameaça).<br><br><b>Análise:</b> A pressa causada pela possível 'vergonha' de ter a catraca bloqueada em público cega a vítima. Trate pagamentos apenas nos guichês físicos.",
         referenciaTitulo: "SmartFit: Central de Ajuda — Pagamentos e Segurança",
-        referenciaLink: "https://ajuda.smartfit.com.br/"
+        referenciaLink: "https://ajuda.smartfit.com.br/",
+        foto: "avatares/9440461.jpg"
     },
     {
         nivel: 3,
@@ -333,7 +360,8 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Comunicação Segura.<br><br><b>Análise:</b> Lembrete amigável que não inclui atalhos de pagamento imediatos nem chave Pix de estranhos.",
         referenciaTitulo: "CERT.br: Fascículo Privacidade (PDF)",
-        referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf"
+        referenciaLink: "https://cartilha.cert.br/fasciculos/privacidade/fasciculo-privacidade.pdf",
+        foto: "avatares/9439726.jpg"
     },
     {
         nivel: 1,
@@ -345,7 +373,8 @@ const cenarios = [
         eGolpe: true,
         explicacao: "Sequestro de WhatsApp Prático.<br><br><b>Análise:</b> O suporte legítimo do WhatsApp nunca entra em contato no chat solicitando a chave primária de recuperação (SMS).",
         referenciaTitulo: "WhatsApp: FAQ Oficial — Segurança e Verificação em Duas Etapas",
-        referenciaLink: "https://faq.whatsapp.com/"
+        referenciaLink: "https://faq.whatsapp.com/",
+        foto: "avatares/9439678.jpg"
     },
     {
         nivel: 3,
@@ -357,6 +386,7 @@ const cenarios = [
         eGolpe: false,
         explicacao: "Código Automático e Seguro.<br><br><b>Análise:</b> É a mensagem de segurança gerada pelo próprio sistema. Contém o alerta vital e expresso: 'Não compartilhe com ninguém'.",
         referenciaTitulo: "WhatsApp: FAQ Oficial — Segurança e Privacidade",
-        referenciaLink: "https://faq.whatsapp.com/"
+        referenciaLink: "https://faq.whatsapp.com/",
+        foto: "avatares/9439727.jpg"
     }
 ];
